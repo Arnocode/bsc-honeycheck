@@ -26,10 +26,14 @@ function isHoney(address) {
 /* GET home page. */
 router.get('/:addresss', function(req, res) {
   input = req.params.addresss;
-  console.log(input);
+  if(web3.utils.isAddress(input)) {
   isHoneypot(input);
   res.header('Content-type', 'text/plain');
   res.status(200).send(result);
+  } else {
+    res.header('Content-type', 'text/plain');
+    res.status(400).send('invalid input');
+  }
 });
 
 function encodeBasicFunction(web3, funcName) {
