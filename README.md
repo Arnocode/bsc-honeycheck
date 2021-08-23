@@ -12,11 +12,12 @@ npm install
 ## Usage
 
 ```
-GET /api/check?address=0x..
+GET /api/honeycheck/:address
 ```
+for example /api/honeycheck/0x8100619e691f84adfaa1cfbe8923bcb6198aa110
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## TODO
+- Validation on valid (eth) address
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
